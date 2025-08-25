@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 gcc -S "$CFILE" -o "${CFILE%.c}.s"
+=======
+gcc -c "$CFILE" -o "${CFILE%.c}.o"
+>>>>>>> 56bfee3 (3-name)
