@@ -3,6 +3,8 @@
 #include <stdio.h>
 
 /* main - Entry point */
+
+/* great than 0 is positive , n =0 is zero , else negative */
 int main(void)
 {
 int n;
