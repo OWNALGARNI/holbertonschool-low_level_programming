@@ -1,4 +1,12 @@
 #include <stdio.h>
+/**
+ * main - Entry point 
+ *
+ * Descreption :alphabet in lowercase,
+ * followed bu new line 
+ *
+ * Return : Always 0 (success)
+ */
 
 int main(void)
 {
