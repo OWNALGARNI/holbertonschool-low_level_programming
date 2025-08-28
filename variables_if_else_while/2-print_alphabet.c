@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - Entry point 
+ * main - Entry point
  *
  * Descreption :alphabet in lowercase,
- * followed bu new line 
+ * followed by new line
  *
  * Return : Always 0 (success)
  */
