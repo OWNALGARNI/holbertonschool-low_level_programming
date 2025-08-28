@@ -1,23 +1,24 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
- * Descreption :alphabet in lowercase,
- * followed by new line
+ * Description: Prints the lowercase alphabet followed by a new line,
+ * using only putchar twice.
  *
- * Return : Always 0 (success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
-int i = 0;
+char ch = 'a';
 
-while (alphabet[i] != '\0')
+while (ch <= 'z')
 {
-putchar(alphabet[i]);
-i++;
+putchar(ch);
+ch++;
 }
+
+putchar('\n');
 
 return (0);
 }
