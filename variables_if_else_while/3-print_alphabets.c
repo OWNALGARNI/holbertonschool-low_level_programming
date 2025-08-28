@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * Description: Prints the alphabet in lowercase, then uppercase,
+ * followed by a new line using only putchar three times.
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 int i;
