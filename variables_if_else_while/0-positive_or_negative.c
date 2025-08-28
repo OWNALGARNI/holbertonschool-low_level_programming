@@ -2,9 +2,14 @@
 #include <time.h>
 #include <stdio.h>
 
-/* main - Entry point */
-
-/* great than 0 is positive , n =0 is zero , else negative */
+/**
+ * main - Entry point
+ *
+ * Description: Assigns a random number to n and prints whether
+ * it is positive, zero, or negative.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 int n;
@@ -12,19 +17,18 @@ int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 
-printf("%d ", n);
-
 if (n > 0)
 {
-printf("is positive\n");
+printf("%d is positive\n", n);
 }
 else if (n == 0)
 {
-printf("is zero\n");
+printf("%d is zero\n", n);
 }
 else
 {
-printf("is negative\n");
+printf("%d is negative\n", n);
 }
+
 return (0);
 }
