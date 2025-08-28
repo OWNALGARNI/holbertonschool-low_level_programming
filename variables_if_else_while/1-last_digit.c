@@ -9,7 +9,7 @@ int last_digit;
 
 srand(time(0));
 n = rand();
-last_digit = n % 10;
+last_digit = n % 98;
 
 printf("Last digit of %d is %d", n, last_digit);
 
@@ -23,7 +23,7 @@ printf(" and is 0\n");
 }
 else
 {
-printf(" and is less than 6 and not 0\n");
+printf(" and is less than 8 and not 0\n");
 }
 return (0);
 }
