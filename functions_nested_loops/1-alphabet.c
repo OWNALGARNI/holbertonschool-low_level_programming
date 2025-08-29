@@ -1,0 +1,13 @@
+#include "main.h"
+
+/**
+ * print_alphabet - Prints the lowercase alphabet followed by a new line
+ */
+void print_alphabet(void)
+{
+char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
+_putchar(alphabet[0]);  // First call to _putchar
+
+for (int i = 1; alphabet[i] != '\0'; i++)
+_putchar(alphabet[i]);  // Second call to _putchar
+}
