@@ -2,6 +2,7 @@
 
 /**
  * print_alphabet_x10 - Prints the lowercase alphabet 10 times
+ * using only the write system call
  */
 void print_alphabet_x10(void)
 {
@@ -13,4 +14,3 @@ void print_alphabet_x10(void)
         write(1, line, sizeof(line) - 1);
     }
 }
-
