@@ -1,18 +1,22 @@
-#include "main.h"  // Assuming _putchar is declared here
-
+#include "main.h"
+/**
+ * print_alphabet_x10 - Prints the lowercase alphabet 10 times
+ *
+ * This function prints the alphabet in lowercase followed by a newline,
+ * repeated 10 times using _putchar.
+ */
 void print_alphabet_x10(void)
 {
-char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
-int i = 0;
+char line[] = "abcdefghijklmnopqrstuvwxyz\n";
+int i;
 
-while (i < 10)
+for (i = 0; i < 10; i++)
 {
 int j = 0;
-while (alphabet[j] != '\0')
+while (line[j])
 {
-_putchar(alphabet[j]);
+_putchar(line[j]);
 j++;
 }
-i++;
 }
 }
