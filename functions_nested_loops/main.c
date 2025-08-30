@@ -1,15 +1,11 @@
 #include "main.h"
+#include <unistd.h>
 
 int main(void)
 {
-    int r;
-
-    r = _isalpha('H');
-    _putchar(r + '0');
-    _putchar('\n');
-    r = _isalpha('9');
-    _putchar(r + '0');
-    _putchar('\n');
+    int val = _abs(-5);
+    char c = val + '0';  /* Only works for single-digit values */
+    write(1, &c, 1);
+    write(1, "\n", 1);
     return (0);
 }
-
