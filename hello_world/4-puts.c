@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - نقطة البداية للبرنامج
+ * main - Entry point
  *
- * Return: دائماً 0 (نجاح)
+ * Description: Prints a message using puts
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
