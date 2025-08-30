@@ -14,18 +14,18 @@ if (n > 0)
 {
 sign = '+';
 write(1, &sign, 1);
-return 1;
+return (1);
 }
 else if (n == 0)
 {
 sign = '0';
 write(1, &sign, 1);
-return 0;
+return (0);
 }
 else
 {
 sign = '-';
 write(1, &sign, 1);
-return -1;
+return (-1);
 }
 }
