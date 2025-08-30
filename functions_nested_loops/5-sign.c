@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  * print_sign - Prints the sign of a number
@@ -8,24 +8,19 @@
  */
 int print_sign(int n)
 {
-char sign;
-
 if (n > 0)
 {
-sign = '+';
-write(1, &sign, 1);
+_putchar('+');
 return (1);
 }
 else if (n == 0)
 {
-sign = '0';
-write(1, &sign, 1);
+_putchar('0');
 return (0);
 }
 else
 {
-sign = '-';
-write(1, &sign, 1);
+_putchar('-');
 return (-1);
 }
 }
