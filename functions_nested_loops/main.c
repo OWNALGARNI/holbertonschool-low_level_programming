@@ -1,11 +1,15 @@
 #include "main.h"
-#include <unistd.h>
 
 int main(void)
 {
-    int val = _abs(-5);
-    char c = val + '0';  /* Only works for single-digit values */
-    write(1, &c, 1);
-    write(1, "\n", 1);
+    print_last_digit(98);
+    _putchar('\n');
+
+    print_last_digit(-1024);
+    _putchar('\n');
+
+    print_last_digit(0);
+    _putchar('\n');
+
     return (0);
 }
