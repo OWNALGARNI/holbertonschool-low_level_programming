@@ -1,7 +1,14 @@
 #include "main.h"
 
-int main(void)
+/**
+ * print_hello - تطبع كلمة Hello باستخدام _putchar
+ */
+void print_hello(void)
 {
-print_alphabet();
-return (0);
+_putchar('H');
+_putchar('e');
+_putchar('l');
+_putchar('l');
+_putchar('o');
+_putchar('\n');
 }

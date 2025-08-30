@@ -1,17 +1,18 @@
-#include "main.h"
+#include "main.h"  // Assuming _putchar is declared here
 
-/**
- * print_alphabet_x10 - prints the alphabet in lowercase 10 times,
- * each followed by a new line
- */
 void print_alphabet_x10(void)
 {
-char line[] = "abcdefghijklmnopqrstuvwxyz\n";
-int i, j;
+char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
+int i = 0;
 
-for (i = 0; i < 10; i++)
+while (i < 10)
 {
-for (j = 0; j < 27; j++)
-_putchar(line[j]);
+int j = 0;
+while (alphabet[j] != '\0')
+{
+_putchar(alphabet[j]);
+j++;
+}
+i++;
 }
 }
