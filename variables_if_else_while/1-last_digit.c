@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -16,6 +17,9 @@ srand(time(0));
 n = rand();
 last_digit = n % 10;
 
+if (last_digit < 0)
+last_digit *= -1;
+
 printf("Last digit of %d is %d", n, last_digit);
 
 if (last_digit > 5)
@@ -30,5 +34,6 @@ else
 {
 printf(" and is less than 6 and not 0\n");
 }
+
 return (0);
 }
