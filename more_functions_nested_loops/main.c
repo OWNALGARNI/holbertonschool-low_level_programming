@@ -2,8 +2,6 @@
 
 int main(void)
 {
-    print_triangle(5);
-    print_triangle(0);
+    print_numbers();
     return (0);
 }
-
