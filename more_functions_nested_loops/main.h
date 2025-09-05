@@ -2,6 +2,7 @@
 #define MAIN_H
 
 int _putchar(char c);
-void fizzbuzz(void);
+void print_triangle(int size);
 
 #endif /* MAIN_H */
+

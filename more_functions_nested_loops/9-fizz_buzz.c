@@ -1,5 +1,15 @@
 #include <stdio.h>
-
+/**
+ * fizzbuzz - Prints numbers from 1 to 100 with FizzBuzz logic
+ *
+ * Description:
+ * - Prints "Fizz" for multiples of 3
+ * - Prints "Buzz" for multiples of 5
+ * - Prints "FizzBuzz" for multiples of both 3 and 5
+ * - Prints the number itself otherwise
+ * - Each output is separated by a space
+ * - Ends with a newline
+ */
 int main(void)
 {
 int i;
