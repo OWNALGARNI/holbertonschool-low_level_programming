@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    char *msg = "Hello from Riyadh!";
-    _puts(msg);
+    char *msg = "Riyadh";
+    print_rev(msg);
     return (0);
 }
 
