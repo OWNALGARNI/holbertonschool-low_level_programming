@@ -1,14 +1,9 @@
 #include "main.h"
-#include <stdio.h>
 
 int main(void)
 {
-    char *str = "Riyadh";
-    int len;
-
-    len = _strlen(str);
-    printf("Length: %d\n", len);
-
+    char *msg = "Hello from Riyadh!";
+    _puts(msg);
     return (0);
 }
 
