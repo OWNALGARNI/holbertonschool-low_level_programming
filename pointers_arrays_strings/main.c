@@ -3,11 +3,11 @@
 
 int main(void)
 {
-    int x = 10, y = 20;
+    char *str = "Riyadh";
+    int len;
 
-    printf("Before: x = %d, y = %d\n", x, y);
-    swap_int(&x, &y);
-    printf("After: x = %d, y = %d\n", x, y);
+    len = _strlen(str);
+    printf("Length: %d\n", len);
 
     return (0);
 }
