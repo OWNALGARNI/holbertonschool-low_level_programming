@@ -2,8 +2,7 @@
 
 int main(void)
 {
-    print_square(4);
-    print_square(0);
+    fizzbuzz();
     return (0);
 }
 
