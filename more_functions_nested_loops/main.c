@@ -2,9 +2,7 @@
 
 int main(void)
 {
-    print_line(5);  /* Output: _____\n */
-    print_line(0);  /* Output: \n */
-    print_line(-3); /* Output: \n */
+    print_diagonal(5);
+    print_diagonal(0);
     return (0);
 }
-
