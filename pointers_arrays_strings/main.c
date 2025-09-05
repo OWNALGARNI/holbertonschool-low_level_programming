@@ -2,11 +2,10 @@
 
 int main(void)
 {
-    char *even = "Riyadh2025";
-    char *odd = "SaudiArabia";
+    int nums[] = {10, 20, 30, 40, 50};
 
-    puts_half(even); // Output: 025
-    puts_half(odd);  // Output: abia
+    print_array(nums, 5);
+    print_array(nums, 3);
 
     return (0);
 }
