@@ -3,6 +3,6 @@
 int main(void)
 {
     print_numbers();
-    return(0);
+    return (0);
 }
 

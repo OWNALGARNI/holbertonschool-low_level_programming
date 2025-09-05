@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_numbers - prints the number from 0 to 9 followed by anwe line 
+*print_numbers - prints the number from 0 to 9 followed by anwe line
 */
 void print_number(void)
 {
