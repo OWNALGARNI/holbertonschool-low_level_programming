@@ -1,11 +1,13 @@
 #include "main.h"
+#include <stdio.h>
 
 int main(void)
 {
-    int nums[] = {10, 20, 30, 40, 50};
+    char src[] = "Riyadh";
+    char dest[100];
 
-    print_array(nums, 5);
-    print_array(nums, 3);
+    _strcpy(dest, src);
+    printf("Copied string: %s\n", dest);
 
     return (0);
 }
