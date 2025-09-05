@@ -2,6 +2,9 @@
 
 int main(void)
 {
-    more_numbers();
+    print_line(5);  /* Output: _____\n */
+    print_line(0);  /* Output: \n */
+    print_line(-3); /* Output: \n */
     return (0);
 }
+
