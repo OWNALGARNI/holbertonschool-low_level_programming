@@ -3,11 +3,14 @@
 
 int main(void)
 {
-    char dest[100] = "Hello, ";
-    char src[] = "Riyadh2025";
+    char src[] = "Riyadh";
+    char dest[10];
 
-    _strncat(dest, src, 6);
-    printf("%s\n", dest); // Output: Hello, Riyadh2
+    _strncpy(dest, src, 4);
+    printf("%s\n", dest);
+
+    _strncpy(dest, src, 10);
+    printf("%s\n", dest);
 
     return (0);
 }
