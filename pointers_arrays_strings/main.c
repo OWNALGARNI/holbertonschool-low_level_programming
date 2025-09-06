@@ -3,14 +3,14 @@
 
 int main(void)
 {
-    char src[] = "Riyadh";
-    char dest[10];
+    char *a = "Riyadh";
+    char *b = "Riyadh";
+    char *c = "Riyad";
+    char *d = "Riyadh2025";
 
-    _strncpy(dest, src, 4);
-    printf("%s\n", dest);
-
-    _strncpy(dest, src, 10);
-    printf("%s\n", dest);
+    printf("a vs b: %d\n", _strcmp(a, b)); // 0
+    printf("a vs c: %d\n", _strcmp(a, c)); // > 0
+    printf("a vs d: %d\n", _strcmp(a, d)); // < 0
 
     return (0);
 }
