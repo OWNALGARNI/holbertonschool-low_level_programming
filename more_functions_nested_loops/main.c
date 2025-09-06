@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    print_numbers();
+    fizzbuzz();
     return (0);
 }
