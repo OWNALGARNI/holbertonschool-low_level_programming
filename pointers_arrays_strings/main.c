@@ -4,10 +4,10 @@
 int main(void)
 {
     char dest[100] = "Hello, ";
-    char src[] = "Riyadh!";
+    char src[] = "Riyadh2025";
 
-    _strcat(dest, src);
-    printf("%s\n", dest); 
+    _strncat(dest, src, 6);
+    printf("%s\n", dest); // Output: Hello, Riyadh2
 
     return (0);
 }
