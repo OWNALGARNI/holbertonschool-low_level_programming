@@ -2,7 +2,7 @@
 #define MAIN_H
 
 int _putchar(char c);
-char *leet(char *s);
+void print_rev(char *s);
 
 #endif /* MAIN_H */
 
