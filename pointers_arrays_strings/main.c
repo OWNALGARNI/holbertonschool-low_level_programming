@@ -3,8 +3,9 @@
 
 int main(void)
 {
-    char str[] = "Hello Riyadh 2025!";
-    string_toupper(str);
+    char str[] = "hello! my name is riyadh. welcome to {saudi arabia}.";
+
+    cap_string(str);
     printf("%s\n", str);
 
     return (0);
