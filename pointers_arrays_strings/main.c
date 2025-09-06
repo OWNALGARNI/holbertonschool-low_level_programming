@@ -3,14 +3,16 @@
 
 int main(void)
 {
-    char *a = "Riyadh";
-    char *b = "Riyadh";
-    char *c = "Riyad";
-    char *d = "Riyadh2025";
+    int nums[] = {1, 2, 3, 4, 5, 6};
+    int i;
 
-    printf("a vs b: %d\n", _strcmp(a, b)); // 0
-    printf("a vs c: %d\n", _strcmp(a, c)); // > 0
-    printf("a vs d: %d\n", _strcmp(a, d)); // < 0
+    reverse_array(nums, 6);
+
+    for (i = 0; i < 6; i++)
+    {
+        printf("%d ", nums[i]);
+    }
+    printf("\n");
 
     return (0);
 }
