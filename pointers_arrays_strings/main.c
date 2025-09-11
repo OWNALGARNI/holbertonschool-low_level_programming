@@ -1,26 +1,24 @@
 #include "main.h"
-#include <stdio.h>
+#include <sdio.h>
 
 /**
- * main - Entry point to test _atoi
+ * main - Entry point to test _memset
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char *s1 = "Holberton 123";
-    char *s2 = "---+--+4567ab89";
-    char *s3 = "abc";
-    char *s4 = "-2147483648";
-    char *s5 = "++--++--00123";
-    char *s6 = "";
+    char buffer[10];
+    int i;
 
-    printf("s1: %d\n", _atoi(s1));
-    printf("s2: %d\n", _atoi(s2));
-    printf("s3: %d\n", _atoi(s3));
-    printf("s4: %d\n", _atoi(s4));
-    printf("s5: %d\n", _atoi(s5));
-    printf("s6: %d\n", _atoi(s6));
+    _memset(buffer, 'x', 10);
+
+    for (i = 0; i < 10; i++)
+    {
+        _putchar(buffer[i]);
+    }
+
+    _putchar('\n');
 
     return (0);
 }
