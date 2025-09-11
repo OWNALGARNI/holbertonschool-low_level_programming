@@ -1,24 +1,26 @@
 #include "main.h"
-#include <sdio.h>
 
 /**
- * main - Entry point to test _memset
+ * main - Entry point to test _memcpy function
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char buffer[10];
+    char source[] = "Hello";
+    char destination[6];
     int i;
 
-    _memset(buffer, 'x', 10);
+    _memcpy(destination, source, 5);
 
-    for (i = 0; i < 10; i++)
+    destination[5] = '\0';
+
+    for (i = 0; destination[i] != '\0'; i++)
     {
-        _putchar(buffer[i]);
+        _putchar(destination[i]);
     }
-
     _putchar('\n');
 
     return (0);
 }
+
