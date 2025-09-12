@@ -1,10 +1,14 @@
 #include "main.h"
+#include <stdio.h>
 
 int main(void)
 {
     char str[] = "Recursion!";
-    _print_rev_recursion(str);
-    _putchar('\n');
+    int len;
+
+    len = _strlen_recursion(str);
+    printf("Length: %d\n", len);
+
     return (0);
 }
 
