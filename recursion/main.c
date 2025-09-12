@@ -3,12 +3,10 @@
 
 int main(void)
 {
-    char str[] = "Recursion!";
-    int len;
+    int num = 5;
+    int result = factorial(num);
 
-    len = _strlen_recursion(str);
-    printf("Length: %d\n", len);
-
+    printf("Factorial of %d is %d\n", num, result);
     return (0);
 }
 
