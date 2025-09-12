@@ -2,7 +2,9 @@
 
 int main(void)
 {
-    char str[] = "Hello, recursion!";
-    _puts_recursion(str);
+    char str[] = "Recursion!";
+    _print_rev_recursion(str);
+    _putchar('\n');
     return (0);
 }
+
