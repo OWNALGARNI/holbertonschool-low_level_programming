@@ -3,10 +3,13 @@
 
 int main(void)
 {
-    int num = 5;
-    int result = factorial(num);
+    int base = 2;
+    int exponent = 4;
+    int result;
 
-    printf("Factorial of %d is %d\n", num, result);
+    result = _pow_recursion(base, exponent);
+    printf("%d^%d = %d\n", base, exponent, result);
+
     return (0);
 }
 
