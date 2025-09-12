@@ -1,18 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
+/**
+ * main - Test the print_chessboard function
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-    char str[] = "I love programming in C";
-    char sub[] = "programming";
-    char *result;
+    char board[8][8] = {
+        {'r','n','b','q','k','b','n','r'},
+        {'p','p','p','p','p','p','p','p'},
+        {' ',' ',' ',' ',' ',' ',' ',' '},
+        {' ',' ',' ',' ',' ',' ',' ',' '},
+        {' ',' ',' ',' ',' ',' ',' ',' '},
+        {' ',' ',' ',' ',' ',' ',' ',' '},
+        {'P','P','P','P','P','P','P','P'},
+        {'R','N','B','Q','K','B','N','R'}
+    };
 
-    result = _strstr(str, sub);
-
-    if (result != NULL)
-        printf("Substring found: %s\n", result);
-    else
-        printf("Substring not found.\n");
-
+    print_chessboard(board);
     return (0);
 }
+
