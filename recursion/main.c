@@ -3,13 +3,10 @@
 
 int main(void)
 {
-    int base = 2;
-    int exponent = 4;
-    int result;
+    int num = 25;
+    int result = _sqrt_recursion(num);
 
-    result = _pow_recursion(base, exponent);
-    printf("%d^%d = %d\n", base, exponent, result);
-
+    printf("Square root of %d is %d\n", num, result);
     return (0);
 }
 
