@@ -3,13 +3,16 @@
 
 int main(void)
 {
-    char str[] = "abcde123";
-    char accept[] = "abcde";
-    unsigned int len;
+    char str[] = "hello world";
+    char accept[] = "xyzol";
+    char *result;
 
-    len = _strspn(str, accept);
-    printf("Length of prefix substring: %u\n", len);
+    result = _strpbrk(str, accept);
+
+    if (result != NULL)
+        printf("First matching character: %c\n", *result);
+    else
+        printf("No matching character found.\n");
 
     return (0);
 }
-
