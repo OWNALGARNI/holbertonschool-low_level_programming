@@ -3,16 +3,16 @@
 
 int main(void)
 {
-    char str[] = "hello world";
-    char accept[] = "xyzol";
+    char str[] = "I love programming in C";
+    char sub[] = "programming";
     char *result;
 
-    result = _strpbrk(str, accept);
+    result = _strstr(str, sub);
 
     if (result != NULL)
-        printf("First matching character: %c\n", *result);
+        printf("Substring found: %s\n", result);
     else
-        printf("No matching character found.\n");
+        printf("Substring not found.\n");
 
     return (0);
 }
