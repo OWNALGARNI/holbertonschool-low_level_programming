@@ -1,24 +1,19 @@
 #include "main.h"
 
 /**
- * main - Test the print_chessboard function
+ * main - Test the print_diagsums function
  *
  * Return: Always 0
  */
 int main(void)
 {
-    char board[8][8] = {
-        {'r','n','b','q','k','b','n','r'},
-        {'p','p','p','p','p','p','p','p'},
-        {' ',' ',' ',' ',' ',' ',' ',' '},
-        {' ',' ',' ',' ',' ',' ',' ',' '},
-        {' ',' ',' ',' ',' ',' ',' ',' '},
-        {' ',' ',' ',' ',' ',' ',' ',' '},
-        {'P','P','P','P','P','P','P','P'},
-        {'R','N','B','Q','K','B','N','R'}
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
     };
 
-    print_chessboard(board);
+    print_diagsums((int *)matrix, 3);
     return (0);
 }
 
