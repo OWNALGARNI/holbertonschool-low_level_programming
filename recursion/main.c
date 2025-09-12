@@ -3,10 +3,13 @@
 
 int main(void)
 {
-    int num = 25;
-    int result = _sqrt_recursion(num);
+    int num = 17;
 
-    printf("Square root of %d is %d\n", num, result);
+    if (is_prime_number(num))
+        printf("%d is a prime number\n", num);
+    else
+        printf("%d is not a prime number\n", num);
+
     return (0);
 }
 
