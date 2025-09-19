@@ -2,17 +2,18 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point to test _calloc function
+ * main - Entry point to test array_range function
  *
  * Return: Always 0
  */
 int main(void)
 {
-int *array;
-unsigned int i, count = 5;
+int *arr;
+int i;
+int min = 5, max = 10;
 
-array = _calloc(count, sizeof(int));
-if (array == NULL)
+arr = array_range(min, max);
+if (arr == NULL)
 {
 _putchar('E');
 _putchar('R');
@@ -23,14 +24,14 @@ _putchar('\n');
 return (1);
 }
 
-for (i = 0; i < count; i++)
+for (i = 0; i <= (max - min); i++)
 {
-_putchar(array[i] + '0');
+_putchar(arr[i] + '0');
 _putchar(' ');
 }
 _putchar('\n');
 
-free(array);
+free(arr);
 return (0);
 }
 
