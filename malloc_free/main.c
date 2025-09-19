@@ -2,19 +2,18 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point to test str_concat function
+ * main - Entry point to test alloc_grid function
  *
  * Return: Always 0
  */
 int main(void)
 {
-    char *s1 = "Hello, ";
-    char *s2 = "World!";
-    char *result;
-    int i;
+    int **grid;
+    int i, j;
+    int width = 4, height = 3;
 
-    result = str_concat(s1, s2);
-    if (result == NULL)
+    grid = alloc_grid(width, height);
+    if (grid == NULL)
     {
         _putchar('E');
         _putchar('R');
@@ -25,13 +24,21 @@ int main(void)
         return (1);
     }
 
-    for (i = 0; result[i] != '\0'; i++)
+    for (i = 0; i < height; i++)
     {
-        _putchar(result[i]);
+        for (j = 0; j < width; j++)
+        {
+            _putchar(grid[i][j] + '0');
+            if (j < width - 1)
+                _putchar(' ');
+        }
+        _putchar('\n');
     }
-    _putchar('\n');
 
-    free(result);
+    for (i = 0; i < height; i++)
+        free(grid[i]);
+    free(grid);
+
     return (0);
 }
 
