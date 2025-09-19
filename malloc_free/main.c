@@ -1,19 +1,19 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * main - Entry point to test create_array function
+ * main - Entry point to test _strdup function
  *
  * Return: Always 0
  */
 int main(void)
 {
-    char *array;
-    unsigned int i;
-    unsigned int size = 10;
-    char init_char = 'X';
+    char *original = "Hello";
+    char *copy;
+    int i;
 
-    array = create_array(size, init_char);
-    if (array == NULL)
+    copy = _strdup(original);
+    if (copy == NULL)
     {
         _putchar('E');
         _putchar('R');
@@ -24,13 +24,13 @@ int main(void)
         return (1);
     }
 
-    for (i = 0; i < size; i++)
+    for (i = 0; copy[i] != '\0'; i++)
     {
-        _putchar(array[i]);
+        _putchar(copy[i]);
     }
     _putchar('\n');
 
-    free(array);
+    free(copy);
     return (0);
 }
 
