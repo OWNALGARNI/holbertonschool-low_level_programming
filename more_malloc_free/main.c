@@ -2,20 +2,17 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point to test string_nconcat function
+ * main - Entry point to test _calloc function
  *
  * Return: Always 0
  */
 int main(void)
 {
-char *s1 = "Hello, ";
-char *s2 = "World!";
-char *result;
-unsigned int n = 3;
-unsigned int i;
+int *array;
+unsigned int i, count = 5;
 
-result = string_nconcat(s1, s2, n);
-if (result == NULL)
+array = _calloc(count, sizeof(int));
+if (array == NULL)
 {
 _putchar('E');
 _putchar('R');
@@ -26,13 +23,14 @@ _putchar('\n');
 return (1);
 }
 
-for (i = 0; result[i] != '\0'; i++)
+for (i = 0; i < count; i++)
 {
-_putchar(result[i]);
+_putchar(array[i] + '0');
+_putchar(' ');
 }
 _putchar('\n');
 
-free(result);
+free(array);
 return (0);
 }
 
