@@ -2,18 +2,19 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point to test _strdup function
+ * main - Entry point to test str_concat function
  *
  * Return: Always 0
  */
 int main(void)
 {
-    char *original = "Hello";
-    char *copy;
+    char *s1 = "Hello, ";
+    char *s2 = "World!";
+    char *result;
     int i;
 
-    copy = _strdup(original);
-    if (copy == NULL)
+    result = str_concat(s1, s2);
+    if (result == NULL)
     {
         _putchar('E');
         _putchar('R');
@@ -24,13 +25,13 @@ int main(void)
         return (1);
     }
 
-    for (i = 0; copy[i] != '\0'; i++)
+    for (i = 0; result[i] != '\0'; i++)
     {
-        _putchar(copy[i]);
+        _putchar(result[i]);
     }
     _putchar('\n');
 
-    free(copy);
+    free(result);
     return (0);
 }
 
