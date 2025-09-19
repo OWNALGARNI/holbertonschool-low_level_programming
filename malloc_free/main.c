@@ -31,14 +31,6 @@ int main(void)
             _putchar(grid[i][j] + '0');
             if (j < width - 1)
                 _putchar(' ');
-        }
-        _putchar('\n');
-    }
 
-    for (i = 0; i < height; i++)
-        free(grid[i]);
-    free(grid);
-
-    return (0);
-}
-
+~                                                                                                                                                                                                   
+~               
