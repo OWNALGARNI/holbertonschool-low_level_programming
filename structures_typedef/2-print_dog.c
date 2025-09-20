@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stddef.h>
 #include "dog.h"
 
 /**
@@ -27,3 +28,4 @@ printf("Owner: (nil)\n");
 else
 printf("Owner: %s\n", d->owner);
 }
+
