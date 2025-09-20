@@ -1,18 +1,9 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
- * struct dog - structure to store dog information
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner
- */
-struct dog
-{
-    char *name;
-    float age;
-    char *owner;
-};
+#include "dog.h"
 
-#endif /* DOG_H */
+void print_dog(struct dog *d);
+
+#endif /* MAIN_H */
 

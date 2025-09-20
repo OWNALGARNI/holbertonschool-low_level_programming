@@ -1,17 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "dog.h"
+#ifndef DOG_H
+#define DOG_H
 
 /**
- * print_dog - prints the details of a dog
- * @d: pointer to struct dog
+ * struct dog - Defines a dog's basic information
+ * @name: Pointer to a string representing the dog's name
+ * @age: Float representing the dog's age
+ * @owner: Pointer to a string representing the owner's name
  */
-void print_dog(struct dog *d)
+struct dog
 {
-if (d == NULL)
-return;
-
-printf("Name: %s\n", d->name ? d->name : "(nil)");
-printf("Age: %.2f\n", d->age);
-printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
-}
+char *name;
+float age;
+char *owner;
+};
+#endif /* DOG_H */
