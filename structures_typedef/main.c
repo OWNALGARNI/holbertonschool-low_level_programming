@@ -3,7 +3,7 @@
 #include "dog.h"
 
 /**
- * main - Tests new_dog and verifies string copies
+ * main - Tests the free_dog function
  *
  * Return: Always 0 (Success)
  */
@@ -11,26 +11,25 @@ int main(void)
 {
 dog_t *my_dog;
 
-my_dog = new_dog("Ghost", 4.75, "Jon Snow");
+my_dog = malloc(sizeof(dog_t));
 if (my_dog == NULL)
+return (1);
+
+my_dog->name = malloc(sizeof(char) * 6);
+my_dog->owner = malloc(sizeof(char) * 9);
+
+if (my_dog->name == NULL || my_dog->owner == NULL)
 {
-printf("Failed to create dog\n");
+free_dog(my_dog);
 return (1);
 }
 
-printf("Name: %s\n", my_dog->name);
-printf("Age: %.2f\n", my_dog->age);
-printf("Owner: %s\n", my_dog->owner);
+my_dog->name = "Ghost";
+my_dog->age = 4.75;
+my_dog->owner = "Jon Snow";
 
-/* Check that strings are copied */
-if (my_dog->name == "Ghost" || my_dog->owner == "Jon Snow")
-printf("Strings not copied properly\n");
-else
-printf("Strings copied successfully\n");
-
-free(my_dog->name);
-free(my_dog->owner);
-free(my_dog);
+free_dog(my_dog);
 
 return (0);
 }
+
