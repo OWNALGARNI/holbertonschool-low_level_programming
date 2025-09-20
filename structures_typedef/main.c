@@ -1,29 +1,21 @@
 #include <stdio.h>
-#include "main.h"
+#include "dog.h"
 
 /**
- * print_dog - طباعة معلومات الكلب
- * @d: مؤشر إلى هيكل الكلب
- */
-void print_dog(struct dog *d)
-{
-    if (d == NULL)
-        return;
-
-    printf("Name: %s\n", d->name ? d->name : "(nil)");
-    printf("Age: %.2f\n", d->age);
-    printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
-}
-
-/**
- * main - نقطة البداية
- * Return: 0 عند النجاح
+ * main - Entry point to test init_dog function
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    struct dog my_dog = {"Max", 4.5, "Ahmed"};
+    struct dog my_dog;
 
-    print_dog(&my_dog);
+    init_dog(&my_dog, "Buddy", 3.5, "Alice");
+
+    printf("Dog's Name: %s\n", my_dog.name);
+    printf("Dog's Age: %.1f\n", my_dog.age);
+    printf("Dog's Owner: %s\n", my_dog.owner);
+
     return (0);
 }
 
