@@ -19,7 +19,7 @@ char *owner;
  */
 typedef struct dog dog_t;
 
-void free_dog(dog_t *d);
+void print_dog(struct dog *d);
 
 #endif /* DOG_H */
 
