@@ -1,31 +1,34 @@
 #include "function_pointers.h"
 
 /**
- * print_with_putchar - Prints a string using _putchar
- * @str: The string to print
+ * print_number - Prints an integer using _putchar
+ * @n: The integer to print
  *
  * Return: Nothing
  */
-void print_with_putchar(char *str)
+void print_number(int n)
 {
-    int i = 0;
+    int divisor = 1;
+    int digit;
 
-    while (str[i] != '\0')
+    if (n < 0)
     {
-        _putchar(str[i]);
-        i++;
+        _putchar('-');
+        n = -n;
+    }
+
+    while ((n / divisor) >= 10)
+        divisor *= 10;
+
+    while (divisor > 0)
+    {
+        digit = n / divisor;
+        _putchar(digit + '0');
+        n %= divisor;
+        divisor /= 10;
     }
     _putchar('\n');
 }
 
 /**
- * main - Entry point to test print_name
- *
- * Return: Always 0
- */
-int main(void)
-{
-    print_name("Riyadh", print_with_putchar);
-    return (0);
-}
-
+ * main
