@@ -1,34 +1,22 @@
 #include "function_pointers.h"
 
 /**
- * print_number - Prints an integer using _putchar
- * @n: The integer to print
+ * is_98 - Checks if a number is equal to 98
+ * @n: The number to check
  *
- * Return: Nothing
+ * Return: 1 if true, 0 otherwise
  */
-void print_number(int n)
+int is_98(int n)
 {
-    int divisor = 1;
-    int digit;
-
-    if (n < 0)
-    {
-        _putchar('-');
-        n = -n;
-    }
-
-    while ((n / divisor) >= 10)
-        divisor *= 10;
-
-    while (divisor > 0)
-    {
-        digit = n / divisor;
-        _putchar(digit + '0');
-        n %= divisor;
-        divisor /= 10;
-    }
-    _putchar('\n');
+    if (n == 98)
+        return (1);
+    return (0);
 }
 
 /**
- * main
+ * is_negative - Checks if a number is negative
+ * @n: The number to check
+ *
+ * Return: 1 if negative, 0 otherwise
+ */
+int is_negative(int
