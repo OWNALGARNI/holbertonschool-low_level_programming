@@ -5,14 +5,21 @@
 /**
  * print_all - Prints anything based on format specifiers.
  * @format: List of types of arguments passed to the function.
+ *
+ * Description: Supported format characters:
+ * 'c' - char
+ * 'i' - integer
+ * 'f' - float
+ * 's' - string (prints (nil) if NULL)
+ * Any other character is ignored.
  */
 void print_all(const char * const format, ...)
 {
 va_list args;
 unsigned int i = 0;
 char *str;
-char type;
 char *sep = "";
+char type;
 
 va_start(args, format);
 
@@ -33,9 +40,7 @@ printf("%f", va_arg(args, double));
 if (type == 's')
 {
 str = va_arg(args, char *);
-if (str == NULL)
-printf("(nil)");
-if (str != NULL)
+str = (str == NULL) ? "(nil)" : str;
 printf("%s", str);
 }
 sep = ", ";
