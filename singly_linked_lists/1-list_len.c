@@ -1,8 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "list.h"
 
-
+/**
+ * _puts - print a string followed by a new line using _putchar
+ * @str: string to print
+ */
+void _puts(char *str)
+{
+while (*str)
+{
+_putchar(*str);
+str++;
+}
+_putchar('\n');
+}
 /**
  * list_len - Counts the number of elements in a linked list
  * and prints each string
@@ -16,7 +26,7 @@ size_t count = 0;
 const list_t *current = h;
 while (current != NULL)
 {
-printf("%s\n", current->str);
+_puts(current->str);
 current = current->next;
 count++;
 }
