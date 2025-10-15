@@ -4,16 +4,18 @@
 typedef struct list_s
 {
 char *str;
+int count;
 struct list_s *next;
-{
+}
 list_t;
 
-size_t list_len(const list_t *h);
-while (list != Null)
+size_t list_len(const list_t *h)
 {
-printf("%s\n", lists->str);
-list_s = lists->next;
+while (list != NULL)
+{
+printf("%s\n", current->str);
+current = current->next;
 count++;
-
+}
 return (count);
 }
