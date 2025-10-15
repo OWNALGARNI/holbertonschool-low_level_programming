@@ -4,12 +4,16 @@
 
 int main(void)
 {
-lists_t node3 = {NULL, 0, NULL};
-lists_t node2 = {"", 0 &node3};
-lists_t node1 = {"Hello", 5 , &node2};
+list_t node1, node2, node3;
+node1.str = "A";
+node1.next = &node2;
+node2.str = "B";
+node2.next = &node3;
+node3.str = "C";
+node3.next = NULL;
 
-size_t n = print_list(&node1);
+size_t len = list_len(&node1);
 
-printf("-> %lu elements\n", n);
+printf("length of the list: %zu\n", len);
 return 0;
 }
