@@ -1,34 +1,22 @@
-#include "list.h"
+#include "lists.h"
+#include <stddef.h>
 
 /**
- * _puts - print a string followed by a new line using _putchar
- * @str: string to print
- */
-void _puts(char *str)
-{
-while (*str)
-{
-_putchar(*str);
-str++;
-}
-_putchar('\n');
-}
-/**
- * list_len - Counts the number of elements in a linked list
- * and prints each string
- * @h: Pointer to the head of the linked list
+ * list_len - returns the number of 
+ * elements in a linked list_t list
+ * @h: pointer to the head of the list
  *
- * Return: The number of nodes in the linked list
+ * Return: number of elements in the list
  */
 size_t list_len(const list_t *h)
 {
 size_t count = 0;
-const list_t *current = h;
-while (current != NULL)
+
+while (h != NULL)
 {
-_puts(current->str);
-current = current->next;
 count++;
+h = h->next;
 }
+
 return (count);
 }
