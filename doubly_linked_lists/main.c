@@ -49,4 +49,43 @@ int main(void)
 
 	return (0);
 }                                                                                                                                                                                        
-~            
+
+
+
+/**
+ * main - Entry point of the program
+ * Description: Demonstrates how to create a doubly linked list,
+ * add nodes at the beginning and the end, and print the list.
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    dlistint_t *head = NULL;
+    dlistint_t *node;
+
+    node = add_dnodeint(&head, 10);
+    if (node == NULL)
+    {
+        printf("Failed to add node at beginning\n");
+        return (1);
+    }
+    node = add_dnodeint(&head, 20);
+    if (node == NULL)
+    {
+        printf("Failed to add node at beginning\n");
+        return (1);
+    }
+
+    node = add_dnodeint_end(&head, 30);
+    if (node == NULL)
+    {
+        printf("Failed to add node at end\n");
+        return (1);
+    }
+
+    printf("Current list:\n");
+    print_dlistint(head);
+
+
+    return (0);
+}
