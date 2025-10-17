@@ -32,5 +32,21 @@ int main(void)
     return (0);
 }
 
-~                                                                                                                                                                                                   
+~           /**
+ * main - Test add_dnodeint function
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	dlistint_t *head = NULL;
+
+	add_dnodeint(&head, 5);
+	add_dnodeint(&head, 10);
+	add_dnodeint(&head, 15);
+
+	print_dlistint(head);
+
+	return (0);
+}                                                                                                                                                                                        
 ~            
