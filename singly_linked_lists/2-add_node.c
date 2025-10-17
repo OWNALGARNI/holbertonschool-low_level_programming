@@ -2,8 +2,8 @@
 #include <string.h>
 
 /**
- * _strlen - Calculates the length of a string
- * @s: The string to measure
+ * _strlen - Returns the length of a string
+ * @s: The string
  *
  * Return: Length of the string
  */

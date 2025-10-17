@@ -1,41 +1,42 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "lists.h"
 #include "lists.h"
 
-int _putchar(char c);
-
-void print_string(char *str)
+/**
+ * print_list - prints all the elements of a list_t list
+ * @h: pointer to the head of the list
+ *
+ * Return: number of nodes
+ */
+size_t print_list(const list_t *h)
 {
-    int i = 0;
+    size_t count = 0;
 
-    while (str[i] != '\0')
+    while (h)
     {
-        _putchar(str[i]);
-        i++;
+        if (h->str)
+            printf("[%u] %s\n", h->len, h->str);
+        else
+            printf("[0] (nil)\n");
+
+        h = h->next;
+        count++;
     }
+
+    return (count);
 }
 
-void print_list(list_t *head)
-{
-    list_t *temp = head;
-
-    while (temp != NULL)
-    {
-        print_string(temp->str);
-        _putchar('\n');
-        temp = temp->next;
-    }
-}
-
+/**
+ * main - Entry point to test add_node
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
     list_t *head = NULL;
 
     add_node(&head, "Hello");
     add_node(&head, "World");
-    add_node(&head, "ChatGPT");
+    add_node(&head, "");
 
     print_list(head);
 
