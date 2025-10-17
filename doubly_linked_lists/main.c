@@ -89,3 +89,60 @@ int main(void)
 
     return (0);
 }
+
+
+
+
+/**
+ * main - Entry point to test doubly linked list functions
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    dlistint_t *head = NULL;
+    dlistint_t *new_node;
+    size_t len;
+
+    new_node = add_dnodeint(&head, 10);
+    if (!new_node)
+        return (EXIT_FAILURE);
+
+    new_node = add_dnodeint(&head, 20);
+    if (!new_node)
+        return (EXIT_FAILURE);
+
+    new_node = add_dnodeint_end(&head, 30);
+    if (!new_node)
+        return (EXIT_FAILURE);
+
+    new_node = add_dnodeint_end(&head, 40);
+    if (!new_node)
+        return (EXIT_FAILURE);
+
+    printf("List contents:\n");
+    print_dlistint(head);
+
+    len = dlistint_len(head);
+    printf("List length: %lu\n", len);
+
+    free_dlistint(head);
+
+    return (EXIT_SUCCESS);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
