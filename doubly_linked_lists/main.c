@@ -218,7 +218,55 @@ int main(void)
     return (0);
 }
 
+/**
+ * main - check the insert_dnodeint_at_index function
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    dlistint_t *head = NULL;
+    dlistint_t *new_node;
+    size_t i;
 
+  
+    add_dnodeint(&head, 10);
+    add_dnodeint(&head, 20);
+    add_dnodeint(&head, 30);
+    printf("Initial list:\n");
+    print_dlistint(head);
+
+  
+    new_node = insert_dnodeint_at_index(&head, 1, 99);
+    if (new_node == NULL)
+    {
+        printf("Failed to insert node at index 1\n");
+        return (1);
+    }
+
+    printf("After inserting 99 at index 1:\n");
+    print_dlistint(head);
+
+   
+    insert_dnodeint_at_index(&head, 0, 100);
+    printf("After inserting 100 at index 0:\n");
+    print_dlistint(head);
+
+   
+    insert_dnodeint_at_index(&head, 5, 200);
+    printf("After inserting 200 at index 5:\n");
+    print_dlistint(head);
+
+   
+    new_node = insert_dnodeint_at_index(&head, 10, 300);
+    if (new_node == NULL)
+        printf("Cannot insert at index 10 (out of range)\n");
+
+  
+    free_dlistint(head);
+
+    return (0);
+}
 
 
 
