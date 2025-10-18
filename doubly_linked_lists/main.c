@@ -268,6 +268,52 @@ int main(void)
     return (0);
 }
 
+/**
+ * main - Entry point to test doubly linked list functions
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    dlistint_t *head = NULL;
+    dlistint_t *node;
+    int sum;
 
+   
+    add_dnodeint(&head, 2);
+    add_dnodeint(&head, 1);
+
+   
+    add_dnodeint_end(&head, 3);
+    add_dnodeint_end(&head, 4);
+
+   
+    printf("Doubly linked list:\n");
+    print_dlistint(head);
+
+   
+    sum = sum_dlistint(head);
+    printf("Sum of all elements: %d\n", sum);
+
+ 
+    node = get_dnodeint_at_index(head, 2);
+    if (node)
+        printf("Node at index 2: %d\n", node->n);
+
+  
+    insert_dnodeint_at_index(&head, 2, 99);
+    printf("List after inserting 99 at index 2:\n");
+    print_dlistint(head);
+
+   
+    delete_dnodeint_at_index(&head, 1);
+    printf("List after deleting node at index 1:\n");
+    print_dlistint(head);
+
+   
+    free_dlistint(head);
+
+    return (0);
+}
 
 
