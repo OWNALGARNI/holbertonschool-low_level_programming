@@ -49,4 +49,4 @@ if (bytes_written != bytes_read)
 return (0);
 
 return (bytes_written);
-}
+}:%s/\s\+$//e
