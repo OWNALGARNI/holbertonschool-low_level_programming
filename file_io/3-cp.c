@@ -4,20 +4,12 @@
 #include <unistd.h>
 
 /**
- * main - Copies the content of one file to another.
- * @argc: Number of arguments.
- * @argv: Array of arguments.
- *
- * Return: 0 on success, or exits with error codes on failure.
- *
- * Description:
- * If the number of arguments is not correct, prints usage message and exits with 97.
- * If file_from cannot be read, prints error and exits with 98.
- * If file_to cannot be created or written to, prints error and exits with 99.
- * If any file descriptor cannot be closed, prints error and exits with 100.
- * Copies data in chunks of 1024 bytes.
- * Sets file permissions to rw-rw-r-- for created file.
- */
+* main - copies the content of a file to another file
+* @argc: number of arguments
+* @argv: array of arguments
+*
+* Return: 0 on success, exits with codes on failure
+*/
 int main(int argc, char *argv[])
 {
 int file_from, file_to;
