@@ -131,13 +131,37 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
+/**
+ * main - Entry point to test get_dnodeint_at_index
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	dlistint_t *head = NULL;
+	dlistint_t *node;
+	int i;
+
+	for (i = 0; i < 10; i++)
+		add_dnodeint_end(&head, i * 10);
+
+	node = get_dnodeint_at_index(head, 5);
+	if (node != NULL)
+		printf("Node at index 5: %d\n", node->n);
+	else
+		printf("Node at index 5 not found\n");
+
+	node = get_dnodeint_at_index(head, 15);
+	if (node != NULL)
+		printf("Node at index 15: %d\n", node->n);
+	else
+		printf("Node at index 15 not found\n");
 
 
+	free_dlistint(head);
 
-
-
-
-
+	return (0);
+}
 
 
 
