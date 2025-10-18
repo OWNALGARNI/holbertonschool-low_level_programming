@@ -164,6 +164,59 @@ int main(void)
 }
 
 
+/**
+ * main - tests the sum_dlistint function that sums all the node values
+ * Return: 0 on success
+ */
+int main(void)
+{
+    dlistint_t *head;
+    dlistint_t *node;
+
+  
+    head = malloc(sizeof(dlistint_t));
+    if (!head)
+        return (1);
+    head->n = 5;          
+    head->prev = NULL;    
+
+   
+    node = malloc(sizeof(dlistint_t));
+    if (!node)
+    {
+        free(head);       
+        return (1);
+    }
+    node->n = 10;         
+    node->prev = head;   
+    head->next = node;    
+
+   
+    node = malloc(sizeof(dlistint_t));
+    if (!node)
+    {
+        free(head->next);
+        free(head);
+        return (1);
+    }
+    node->n = 15;                 
+    node->prev = head->next;     
+    head->next->next = node;     
+    node->next = NULL;           
+
+   
+    printf("Sum of list: %d\n", sum_dlistint(head));
+
+  
+    while (head)
+    {
+        node = head->next;
+        free(head);
+        head = node;
+    }
+
+    return (0);
+}
 
 
 
