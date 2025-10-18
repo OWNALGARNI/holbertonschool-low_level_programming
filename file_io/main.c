@@ -39,3 +39,23 @@ int main(void)
 
     return (0);
 }
+
+/**
+ * main - Entry point to test append_text_to_file
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    char *filename = "example.txt";
+    char *text = "This is new text to append.\n";
+
+    int result = append_text_to_file(filename, text);
+
+    if (result == 1)
+        printf("Text appended successfully.\n");
+    else
+        printf("Failed to append text.\n");
+
+    return (0);
+}
