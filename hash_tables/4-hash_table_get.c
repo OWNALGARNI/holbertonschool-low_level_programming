@@ -2,7 +2,14 @@
 #include <string.h>
 #include "hash_tables.h"
 
-/* Retrieves the value associated with a key in a hash table */
+/**
+ * hash_table_get - Retrieves the value associated with a key in a hash table
+ * @ht: Pointer to the hash table
+ * @key: Key string to look for
+ *
+ * Return: Value associated with the key, or NULL if key not found
+ */
+
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 unsigned long int index;
