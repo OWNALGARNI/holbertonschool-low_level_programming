@@ -5,34 +5,39 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - Deletes a hash table
- * @ht: Pointer to the hash table to delete
+ * hash_table_print - Prints a hash table
+ * @ht: Pointer to the hash table.
  *
- * Description: Frees all memory allocated for the hash table,
- * including all nodes and the array itself.
+ * Description: Prints all key/value pairs in the hash table
+ * in the order they appear in the array and in the linked lists.
+ * Format: {'key': 'value', ...}
  * Does nothing if ht is NULL.
  */
-void hash_table_delete(hash_table_t *ht)
+void hash_table_print(const hash_table_t *ht)
 {
 unsigned long int i;
 hash_node_t *node;
-hash_node_t *tmp;
+int first;
 
 if (ht == NULL)
 return;
 
+first = 1;
+printf("{");
 for (i = 0; i < ht->size; i++)
 {
 node = ht->array[i];
 while (node != NULL)
 {
-tmp = node->next;
-free(node->key);
-free(node->value);
-free(node);
-node = tmp;
+if (first)
+{
+printf("'%s': '%s'", node->key, node->value);
+first = 0;
+}
+else
+printf(", '%s': '%s'", node->key, node->value);
+node = node->next;
 }
 }
-free(ht->array);
-free(ht);
+printf("}\n");
 }
