@@ -4,40 +4,35 @@
 #include <string.h>
 #include "hash_tables.h"
 
-/*
- * hash_table_print - Prints a hash table
- * @ht: pointer to the hash table to print
+/**
+ * hash_table_delete - Deletes a hash table
+ * @ht: Pointer to the hash table to delete
  *
- * Description: Prints the key/value pairs in the order
- * they appear in the array and the linked lists.
- * Format: {'key': 'value', ...}
+ * Description: Frees all memory allocated for the hash table,
+ * including all nodes and the array itself.
  * Does nothing if ht is NULL.
  */
-void hash_table_print(const hash_table_t *ht)
+void hash_table_delete(hash_table_t *ht)
 {
 unsigned long int i;
 hash_node_t *node;
-int first;
+hash_node_t *tmp;
 
 if (ht == NULL)
 return;
 
-first = 1;
-printf("{");
 for (i = 0; i < ht->size; i++)
 {
 node = ht->array[i];
 while (node != NULL)
 {
-if (first)
-{
-printf("'%s': '%s'", node->key, node->value);
-first = 0;
-}
-else
-printf(", '%s': '%s'", node->key, node->value);
-node = node->next;
+tmp = node->next;
+free(node->key);
+free(node->value);
+free(node);
+node = tmp;
 }
 }
-printf("}\n");
+free(ht->array);
+free(ht);
 }
