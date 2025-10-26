@@ -66,5 +66,6 @@ return (1);
 *
 * Description: Adds a new element to the hash table. If the key already
 * exists, updates its value. In case of collision, the new node is
-* added at the beginning of the*
+* added at the beginning of the
+*/
 
