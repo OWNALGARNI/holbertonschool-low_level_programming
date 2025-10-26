@@ -63,6 +63,8 @@ return (1);
 * @value: Value string associated with the key
 *
 * Return: 1 on success, 0 on failure
-*/
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
-{
+*
+* Description: Adds a new element to the hash table. If the key already
+* exists, updates its value. In case of collision, the new node is
+* added at the beginning of the*
+
